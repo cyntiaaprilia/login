@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="#" method="POST" id="login-form">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" required aria-label="Username">
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password" required aria-label="Password">
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+
+            <div class="remember-forgot">
+                <label><input type="checkbox" aria-label="Remember me"> Remember me</label>
+                <a href="#">Forgot password</a>
+            </div>
+
+            <button type="submit" class="btn">Login</button>
+            <div class="register-link">
+                <p>Don't have an account? <a href="#">Register</a></p>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <!-- Footer content -->
+    </footer>
+    <script>
+        // Validasi Formulir
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            const username = document.querySelector('input[type="text"]').value;
+            const password = document.querySelector('input[type="password"]').value;
+
+            if (!username || !password) {
+                alert('Both fields are required.');
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
